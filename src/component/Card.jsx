@@ -16,7 +16,6 @@ import {
 export default function Card(props) {
   
   return (
-    
     <Center py={6}>
       <Box
         maxW={"445px"}
@@ -55,37 +54,28 @@ export default function Card(props) {
           </Box>
         </Stack>
 
-        <Stack>
+        <Stack mt={"25px"}>
           <Text color={"gray.500"}>{props.text}</Text>
         </Stack>
-        {/* <Stack mt={6} direction={'row'} spacing={4} align={'center'}>
-          <Avatar
-            src={'https://avatars0.githubusercontent.com/u/1164541?v=4'}
-            alt={'Author'}
-          />
-          <Stack direction={'column'} spacing={0} fontSize={'sm'}>
-            <Text fontWeight={600}>Achim Rolle</Text>
-            <Text color={'gray.500'}>Feb 08, 2021 · 6min read</Text>
-          </Stack>
-        </Stack> */}
 
-<Divider mt={5} orientation='horizontal' />
+        <Divider mt={5} orientation="horizontal" />
         <Flex mb={-10}>
-        
           <Box p="4">
-          <Text color={"gray.500"}>التفاصيل</Text>  
+            <Text color={"gray.500"}>التفاصيل</Text>
           </Box>
           <Spacer />
           <Box p="4">
-
-          <Text color={()=>{if(props.flag===true)
-            {
-              return "green.500"
-              }
-              else
-              {
-                return "gray.500"
-                }}}>{props.status}</Text>
+            <Text
+              color={() => {
+                if (props.flag === true) {
+                  return "green.500";
+                } else {
+                  return "gray.500";
+                }
+              }}
+            >
+              {props.status}
+            </Text>
           </Box>
         </Flex>
       </Box>
