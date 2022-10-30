@@ -22,6 +22,8 @@ import {
   ChevronRightIcon,
 } from '@chakra-ui/icons';
 
+import ModelLogin from './body/ModelLogin';
+
 export default function WithSubnavigation() {
   const { isOpen, onToggle } = useDisclosure();
 
@@ -68,14 +70,7 @@ export default function WithSubnavigation() {
           justify={'flex-end'}
           direction={'row'}
           spacing={6}>
-          <Button
-            as={'a'}
-            fontSize={'sm'}
-            fontWeight={400}
-            variant={'link'}
-            href={'#'}>
-            Sign In
-          </Button>
+          <ModelLogin/>
           <Button
             display={{ base: 'none', md: 'inline-flex' }}
             fontSize={'sm'}
