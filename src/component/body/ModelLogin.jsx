@@ -35,23 +35,23 @@ function ModelLogin() {
         >
           <ModalOverlay />
           <ModalContent>
-            <ModalHeader>Create your account</ModalHeader>
+            <ModalHeader>sign in</ModalHeader>
             <ModalCloseButton />
             <ModalBody pb={6}>
               <FormControl>
-                <FormLabel>First name</FormLabel>
-                <Input ref={initialRef} placeholder='First name' />
+                <FormLabel>User Name</FormLabel>
+                <Input type={"email"} ref={initialRef} placeholder='Email' />
               </FormControl>
   
               <FormControl mt={4}>
-                <FormLabel>Last name</FormLabel>
-                <Input placeholder='Last name' />
+                <FormLabel>Password</FormLabel>
+                <Input type={"password"} placeholder='Password' />
               </FormControl>
             </ModalBody>
   
             <ModalFooter>
-              <Button colorScheme='blue' mr={3}>
-                Save
+              <Button colorScheme='green' mr={3}>
+                sign in
               </Button>
               <Button onClick={onClose}>Cancel</Button>
             </ModalFooter>
