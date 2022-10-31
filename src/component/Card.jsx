@@ -16,11 +16,10 @@ import {
 export default function Card(props) {
   
   return (
-    <Center py={6}>
+    <Box p={6}>
       <Box
-        maxW={"445px"}
-        minH={"270px"}
-        maxH={"300px"}
+        minH={330}
+        
         w={"full"}
         bg={useColorModeValue("white", "gray.900")}
         boxShadow={"2xl"}
@@ -34,7 +33,7 @@ export default function Card(props) {
             <Center>
               <Heading
                 color={useColorModeValue("gray.700", "white")}
-                fontSize={"2xl"}
+                fontSize={[15,20,15,25]/*"2xl"*/}
                 fontFamily={"body"}
               >
                 {props.title}
@@ -55,11 +54,13 @@ export default function Card(props) {
         </Stack>
 
         <Stack mt={"25px"}>
-          <Text color={"gray.500"}>{props.text}</Text>
+          <Text noOfLines={3} color={"gray.500"}>{props.text}</Text>
         </Stack>
-
-        <Divider mt={5} orientation="horizontal" />
-        <Flex mb={-10}>
+        
+      </Box>
+      <Box position={'relative'} bottom={20}>
+      <Divider mt={5} orientation="horizontal" />
+        <Flex>
           <Box p="4">
             <Text color={"gray.500"}>التفاصيل</Text>
           </Box>
@@ -78,7 +79,9 @@ export default function Card(props) {
             </Text>
           </Box>
         </Flex>
+
       </Box>
-    </Center>
+      
+    </Box>
   );
 }

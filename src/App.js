@@ -4,15 +4,16 @@ import NavBar from './component/NavBar';
 import ModelLogin from './component/body/ModelLogin';
 import GridByChakra from './component/body/GridByChakra'
 
-import Body from './component/body/Body';
+//import Body from './component/body/Body';
+import BodyF from './component/body/BodyF';
 
 function App() {
-  
+ 
   return (
     <>
     <NavBar/>
-    <Body/>
-    <GridByChakra/>
+    <BodyF/>
+    {/* <GridByChakra/> */}
     <Footer/>
     <ModelLogin/>
     </>
